@@ -25,3 +25,6 @@
 - `docker network create -d overlay <network name>`
 - `docker service create --name <service name> --network <network name> --replica 2 sleep 1d`
 - `docker service ps <service name>`
+
+### IPVLAN
+- `docker network create -d ipvlan --subnet=192.168.1.0/24 --gateway=192.168.1.254 --ip-range=192.168.1.0/28 -o ipvlan_mode=l2 -o parent=eth0 <network name>`
